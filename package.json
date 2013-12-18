@@ -1,0 +1,32 @@
+{
+  "name": "open-geocoder",
+  "version": "0.0.0-1",
+  "description": "simples client that uses the Open Street Map API for geocoding and reverse geocoding",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaquimserafim/open-geocoder.git"
+  },
+  "keywords": [
+    "geocoder",
+    "reverse"
+  ],
+  "author": "@joaquimserafim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaquimserafim/open-geocoder/issues"
+  },
+  "homepage": "https://github.com/joaquimserafim/open-geocoder",
+  "devDependencies": {
+    "tape": "~2.3.0"
+  },
+  "dependencies": {
+    "event-stream": "~3.0.20"
+  }
+}
