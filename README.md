@@ -20,12 +20,13 @@ API v0.6 is the current version of the OSM Editing API deployed 17-21 April 2009
 
 ###Usage 
 
-#####Geocode
+####Geocode
 
 	geocode = function (addr, [options], cb)
 	
 	addr: string , ex: '135 pilkington avenue, birmingham'
-		for address format can see here more: http://wiki.openstreetmap.org/wiki/Nominatim#Search
+		"for address format can see here more: 
+			http://wiki.openstreetmap.org/wiki/Nominatim#Search"
 	
 	
 	options: object, ex: {addressdetails: 1, polygon_geojson: 1}
@@ -63,11 +64,11 @@ API v0.6 is the current version of the OSM Editing API deployed 17-21 April 2009
 	
 	
 
-	//	 CODE	
+	//	CODE	
 	
 	var OpenGeocoder = require('node-open-geocoder');
 	
-	var geo = new Open/Geocoder();
+	var geo = new OpenGeocoder();
 
 	geo.reverse(-8.945406, 38.575078, function (err, res) {
     	if (err) return err;
