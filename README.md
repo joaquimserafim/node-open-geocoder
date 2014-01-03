@@ -31,11 +31,11 @@ API v0.6 is the current version of the OSM Editing API deployed 17-21 April 2009
 	
 	options: object, ex: {addressdetails: 1, polygon_geojson: 1}
 		addressdetails = Include a breakdown of the address into elements, can be 0 | 1		
-		 the second prop can be:
+		 the second prop define the type of polygon and can be define only one:
 		 	polygon_geojson:  Output geometry of results in geojson format.
-		 	polygon_kml:      Output geometry of results in kml format.
-		 	polygon_svg:      Output geometry of results in svg format.
-		 	polygon_text:     Output geometry of results as a WKT.
+		 	polygon_kml    :  Output geometry of results in kml format.
+		 	polygon_svg    :  Output geometry of results in svg format.
+		 	polygon_text   :  Output geometry of results as a WKT.
 
 	cb: callback (err, res)
 
