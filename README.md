@@ -1,12 +1,16 @@
 #node-open-geocoder
 
 
-**Simple client for Node.js that uses the Open Street Map API for geocoding and reverse geocoding.**
-
-
 <a href="https://nodei.co/npm/node-open-geocoder/"><img src="https://nodei.co/npm/node-open-geocoder.png"></a>
 
+[![Build Status](https://travis-ci.org/joaquimserafim/node-open-geocoder.png?branch=master)](https://travis-ci.org/joaquimserafim/node-open-geocoder)
+
+
+
 ###Description
+
+**Simple client for Node.js that uses the Open Street Map API for geocoding and reverse geocoding.**
+
 
 OpenStreetMap has an Editing API for fetching and saving raw geodata from/to the OpenStreetMap database.
 
