@@ -1,6 +1,6 @@
 {
   "name": "node-open-geocoder",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Client to use the Open Street Map API for geocoding and reverse geocoding",
   "main": "index.js",
   "directories": {
@@ -27,6 +27,6 @@
     "tape": "~2.3.0"
   },
   "dependencies": {
-    "event-stream": "~3.0.20"
+    "event-stream": "^3.1.7"
   }
 }
