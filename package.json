@@ -22,7 +22,7 @@
     "reverse"
   ],
   "author": "@joaquimserafim",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/joaquimserafim/node-open-geocoder/issues"
   },
