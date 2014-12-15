@@ -75,7 +75,8 @@ function(assert) {
   // lets override the open URL for this test
   geo = new OpenGeocoder('badnominatim.openstreetmap.org');
   geo.reverse(-80.900349, 38.576622, function(err) {
-    assert.equal(err.message, 'getaddrinfo ENOTFOUND');
+    // node.js 0.11 shows the bad addr in the error
+    assert.equal(/^getaddrinfo ENOTFOUND/.test(err.message), true);
     assert.end();
   });
 });
