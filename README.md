@@ -28,54 +28,65 @@ API v0.6 is the current version of the OSM Editing API deployed 17-21 April 2009
 
 	geocode = function (addr, [options], cb)
 	
-	addr: string , ex: '135 pilkington avenue, birmingham'
-		"for address format can see here more: 
-			http://wiki.openstreetmap.org/wiki/Nominatim#Search"
 	
+		
+
+[more info about](http://wiki.openstreetmap.org/wiki/Nominatim#Search) the *address format*
 	
-	options: object, ex: {addressdetails: 1, polygon_geojson: 1}
-		addressdetails = Include a breakdown of the address into elements, can be 0 | 1		
-		 the second prop define the type of polygon and can be define only one:
+* addr<br>
+	ex: `'135 pilkington avenue, birmingham'`
+* options<br>
+	ex: `{addressdetails: 1, polygon_geojson: 1}`
+<br><br>
+		
+		addressdetails: Include a breakdown of the address into elements, can be 0 | 1
+						
+		the second prop define the type of polygon and can be define only one:
 		 	polygon_geojson:  Output geometry of results in geojson format.
 		 	polygon_kml    :  Output geometry of results in kml format.
 		 	polygon_svg    :  Output geometry of results in svg format.
 		 	polygon_text   :  Output geometry of results as a WKT.
 
-	cb: callback (err, res)
+* cb: `callback(err, res)`
 
 
-	// CODE
+######Example
 	
 	var OpenGeocoder = require('node-open-geocoder');
 	
 	var geo = new OpenGeocoder();
 	
-	geo.geocode('135 pilkington avenue, birmingham', function (err, res) {
-    	if (err) return t.notOk(false, err);
-    	
-    	console.log(res);
+	geo.geocode('135 pilkington avenue, birmingham', function(err, res) {
+    	if (err) {
+    		return err;
+    	} else {
+    		return res;
+    	}
   	});
   	
   	
   	
 ####Reverse
 
-	reverse = function (longitude, latitude, cb)
+	reverse = function(longitude, latitude, cb)
 		
-		longitude: valid longitude
-		latitude : valid latitude		
-		cb       : callback (err, res)
+		
+* longitude: valid longitude
+* latitude : valid latitude		
+* cb       : callback(err, res)
 	
 	
 
-	//	CODE	
+######Example	
 	
 	var OpenGeocoder = require('node-open-geocoder');
 	
 	var geo = new OpenGeocoder();
 
-	geo.reverse(-8.945406, 38.575078, function (err, res) {
-    	if (err) return err;
-    	
-    	console.log(res)	
+	geo.reverse(-8.945406, 38.575078, function(err, res) {
+    	if (err) {
+    		return err;
+    	} else {
+    		return res;
+    	}	
 	});
