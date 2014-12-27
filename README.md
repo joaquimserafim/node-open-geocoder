@@ -5,6 +5,14 @@
 
 [![Build Status](https://travis-ci.org/joaquimserafim/node-open-geocoder.png?branch=master)](https://travis-ci.org/joaquimserafim/node-open-geocoder)
 
+**code coverage:**  
+`npm test && npm run check-coverage && npm run coverage`
+
+**codestyle:** 	
+`npm run codestyle`
+
+**jshint:** 	
+`npm run jshint`
 
 
 ###Description
