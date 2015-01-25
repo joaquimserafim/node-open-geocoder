@@ -3,7 +3,7 @@
 
 <a href="https://nodei.co/npm/node-open-geocoder/"><img src="https://nodei.co/npm/node-open-geocoder.png?downloads=true"></a>
 
-[![Build Status](https://travis-ci.org/joaquimserafim/node-open-geocoder.png?branch=master)](https://travis-ci.org/joaquimserafim/node-open-geocoder)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](https://travis-ci.org/joaquimserafim/node-open-geocode)![Code Coverage 100%](https://img.shields.io/badge/code%20coverage-100%25-green.svg?style=flat-square)[![ISC License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/joaquimserafim/node-open-geocode/blob/master/LICENSE)
 
 **code coverage:**  
 `npm test && npm run check-coverage && npm run coverage`
