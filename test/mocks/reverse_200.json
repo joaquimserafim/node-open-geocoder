@@ -1,0 +1,25 @@
+{
+  "place_id": "109962736",
+  "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+  "osm_type": "way",
+  "osm_id": "196984895",
+  "lat": "38.578832",
+  "lon": "-8.9469721",
+  "display_name": "Avenida Doutor António de Matos Fortuna, Quinta do Anjo, Palmela, Setúbal, Península de Setúbal, Área Metropolitana de Lisboa, Portugal",
+  "address": {
+    "road": "Avenida Doutor António de Matos Fortuna",
+    "residential": "Quinta do Anjo",
+    "village": "Quinta do Anjo",
+    "county": "Palmela",
+    "state_district": "Península de Setúbal",
+    "state": "Área Metropolitana de Lisboa",
+    "country": "Portugal",
+    "country_code": "pt"
+  },
+  "boundingbox": [
+    "38.5746729",
+    "38.5801647",
+    "-8.9483526",
+    "-8.9465671"
+  ]
+}
