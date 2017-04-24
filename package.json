@@ -1,17 +1,17 @@
 {
   "name": "node-open-geocoder",
-  "version": "1.2.1",
-  "description": "Client to use the Open Street Map API for geocoding and reverse geocoding",
+  "version": "2.0.0",
+  "description": "Open Street Map API client for geocoding and reverse geocoding",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
   "scripts": {
-    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/tape/bin/tape test/*.js",
-    "jshint": "./node_modules/jshint/bin/jshint -c .jshintrc lib/*.js test/*.js",
-    "codestyle": "./node_modules/jscs/bin/jscs -p google lib/*.js test/*.js",
-    "check-coverage": "./node_modules/istanbul/lib/cli.js check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
-    "coverage": "open coverage/lcov-report/index.html"
+    "coverage": "open coverage/lcov-report/index.html",
+    "coverage:check": "istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "test": "standard --fix && istanbul cover -x test/index.js _mocha test/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,28 +19,41 @@
   },
   "keywords": [
     "geocoder",
-    "reverse"
+    "reverse",
+    "openstreetmap"
   ],
-  "author": "@joaquimserafim",
+  "author": "@JoaquimSerafim",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/joaquimserafim/node-open-geocoder/issues"
   },
   "homepage": "https://github.com/joaquimserafim/node-open-geocoder",
   "devDependencies": {
-    "istanbul": "^0.3.5",
-    "jscs": "^1.8.1",
-    "jshint": "^2.5.10",
-    "pre-commit": "0.0.9",
-    "tape": "^2.14.0"
+    "chai": "^3.5.0",
+    "istanbul": "0.4.5",
+    "mocha": "^3.3.0",
+    "nock": "^9.0.13",
+    "pre-commit": "^1.2.2",
+    "repeat-element": "^1.1.2",
+    "standard": "^8.6.0"
   },
   "dependencies": {
-    "event-stream": "^3.1.7"
+    "get-property-value": "^2.0.0",
+    "is-valid-coordinates": "^1.0.0",
+    "is.object": "^1.0.0",
+    "json-parse-safe": "^1.0.3",
+    "qs": "^6.4.0"
+  },
+  "engines": {
+    "node": ">=6.1"
   },
   "pre-commit": [
-    "jshint",
-    "codestyle",
     "test",
-    "check-coverage"
-  ]
+    "coverage:check"
+  ],
+  "standard": {
+    "ignore": [
+      "bench.js"
+    ]
+  }
 }
