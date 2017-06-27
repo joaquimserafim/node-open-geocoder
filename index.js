@@ -6,12 +6,12 @@ max-len: ["error", 80]
 */
 'use strict'
 
-const http                = require('http')
-const parse               = require('json-parse-safe')
-const isValidCoordinates  = require('is-valid-coordinates')
-const isObject            = require('is.object')
-const qs                  = require('qs')
-const getPropValue        = require('get-property-value')
+const http = require('http')
+const parse = require('json-parse-safe')
+const isValidCoordinates = require('is-valid-coordinates')
+const isObject = require('is.object')
+const qs = require('qs')
+const getPropValue = require('get-property-value')
 
 class Geocoder {
 
@@ -19,6 +19,7 @@ class Geocoder {
     this.format = '&format=json'
     this.httpOptions = {
       hostname: getPropValue(options, 'url') || 'nominatim.openstreetmap.org',
+      basePath: getPropValue(options, 'basePath') || '',
       port: getPropValue(options, 'port') || 80,
       agent: false
     }
@@ -52,7 +53,13 @@ class Geocoder {
   }
 
   end (cb) {
-    const req = http.get(this.httpOptions, responseHandler.bind(this, cb))
+    // I put http here since you're using the http module.
+    const req = http.get('http://' +
+                         this.httpOptions.hostname + ':' +
+                         this.httpOptions.port +
+                         this.httpOptions.basePath +
+                         this.httpOptions.path,
+                         responseHandler.bind(this, cb))
 
     req.setTimeout(this.timeout, timeoutCb)
     req.once('error', onError)
