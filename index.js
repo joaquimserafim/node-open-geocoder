@@ -6,12 +6,12 @@ max-len: ["error", 80]
 */
 'use strict'
 
-const http = require('http')
-const parse = require('json-parse-safe')
+const http               = require('http')
+const parse              = require('json-parse-safe')
 const isValidCoordinates = require('is-valid-coordinates')
-const isObject = require('is.object')
-const qs = require('qs')
-const getPropValue = require('get-property-value')
+const isObject           = require('is.object')
+const qs                 = require('qs')
+const getPropValue       = require('get-property-value')
 
 class Geocoder {
 
