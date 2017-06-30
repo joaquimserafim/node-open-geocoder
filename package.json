@@ -1,6 +1,6 @@
 {
   "name": "node-open-geocoder",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Open Street Map API client for geocoding and reverse geocoding",
   "main": "index.js",
   "files": [
