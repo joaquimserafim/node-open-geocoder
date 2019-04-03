@@ -31,6 +31,7 @@ API v0.6 is the current version of the OSM Editing API deployed 17-21 April 2009
     - url, string, OpenStreetMap URL, default to `nominatim.openstreetmap.org`
     - port, integer, OpenStreetMap port, default to `80`
     - timeout, integer, client timeout, default to `10000` mls
+    - userAgent, string, OpenStreetMap needs to receive this header, default to node-open-geocoder
 
 #### geocode
 

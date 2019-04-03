@@ -6,7 +6,7 @@ max-len: ["error", 80]
 */
 'use strict'
 
-const http               = require('http')
+const https              = require('https')
 const parse              = require('json-parse-safe')
 const isValidCoordinates = require('is-valid-coordinates')
 const isObject           = require('is.object')
@@ -20,8 +20,11 @@ class Geocoder {
     this.httpOptions = {
       hostname: getPropValue(options, 'url') || 'nominatim.openstreetmap.org',
       basePath: getPropValue(options, 'basePath') || '',
-      port: getPropValue(options, 'port') || 80,
-      agent: false
+      port: getPropValue(options, 'port') || 443,
+      agent: false,
+      headers: {
+        'User-Agent': getPropValue(options, 'userAgent') || 'node-open-geocoder'
+      }
     }
     this.timeout = getPropValue(options, 'timeout') || 10000
   }
@@ -53,15 +56,10 @@ class Geocoder {
   }
 
   end (cb) {
-    // I put http here since you're using the http module.
-    const req = http.get('http://' +
-                         this.httpOptions.hostname + ':' +
-                         this.httpOptions.port +
-                         this.httpOptions.basePath +
-                         this.httpOptions.path,
-                         responseHandler.bind(this, cb))
+    const req = https.get(this.httpOptions, responseHandler.bind(this, cb))
 
     req.setTimeout(this.timeout, timeoutCb)
+
     req.once('error', onError)
 
     function timeoutCb () {
