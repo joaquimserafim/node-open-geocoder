@@ -59,7 +59,7 @@ describe('node-open-geocoder', () => {
       .query({
         q: '135 pilkington avenue, birmingham',
         addressdetails: 1,
-        'polygon_geojson': 1,
+        polygon_geojson: 1,
         format: 'json'
       })
       .reply(400)
@@ -83,7 +83,7 @@ describe('node-open-geocoder', () => {
       .query({
         q: '135 pilkington avenue, birmingham',
         addressdetails: 1,
-        'polygon_geojson': 1,
+        polygon_geojson: 1,
         format: 'json'
       })
       .reply(200, 'bad json')
@@ -108,7 +108,7 @@ describe('node-open-geocoder', () => {
       .query({
         q: '135 pilkington avenue, birmingham',
         addressdetails: 1,
-        'polygon_geojson': 1,
+        polygon_geojson: 1,
         format: 'json'
       })
       .reply(200, 'bad json')
@@ -132,7 +132,7 @@ describe('node-open-geocoder', () => {
       .query({
         q: '135 pilkington avenue, birmingham',
         addressdetails: 1,
-        'polygon_geojson': 1,
+        polygon_geojson: 1,
         format: 'json'
       })
       .reply(200, mocks.gecode_200)
@@ -153,7 +153,7 @@ describe('node-open-geocoder', () => {
       .query({
         q: '135 pilkington avenue, birmingham',
         addressdetails: 1,
-        'polygon_geojson': 1,
+        polygon_geojson: 1,
         format: 'json'
       })
       .reply(200, mocks.gecode_200)

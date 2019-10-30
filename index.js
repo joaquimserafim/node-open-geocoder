@@ -35,7 +35,7 @@ class Geocoder {
       : '&addressdetails=1&polygon_geojson=1'
 
     this.httpOptions.path = '/search?q=' +
-      addr.replace(/ /g, '+') +
+      encodeURI(addr.replace(/ /g, '+')) +
       callOptions +
       this.format
 
@@ -95,7 +95,7 @@ function responseHandler (handler, res) {
   if (statusCode !== 200) {
     error = new Error(`Request Failed.\nStatus Code: ${statusCode}`)
   } else if (!/^application\/json/.test(contentType)) {
-    error = new Error(`Invalid content-type.\n` +
+    error = new Error('Invalid content-type.\n' +
       `Expected application/json but received ${contentType}`)
   }
 
